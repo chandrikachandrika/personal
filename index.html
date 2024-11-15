@@ -4,35 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Chandrika's Personal Portfolio">
-    <title>Chandrika's Portfolio</title>
+    <title>Chandrika | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation Bar -->
     <header>
         <nav>
             <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
+    <!-- Hero Section (Home) -->
+    <section id="home" class="hero">
         <div class="container">
             <h1>Hi, I'm Chandrika</h1>
-            <p>I'm a passionate developer with expertise in front-end and back-end technologies. I love solving problems and building intuitive user experiences.</p>
+            <p>I'm a creative developer passionate about building innovative web applications.</p>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <h2>Skills</h2>
+            <h2>About Me</h2>
+            <p>I specialize in front-end and back-end development, with a focus on creating seamless user experiences. With a strong passion for coding and design, I love bringing ideas to life on the web.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-cards">
+                <div class="card">
+                    <h3>Project 1</h3>
+                    <p>A full-stack web application built using React and Node.js.</p>
+                    <a href="https://github.com/chandrika/project1" target="_blank">View Project</a>
+                </div>
+                <div class="card">
+                    <h3>Project 2</h3>
+                    <p>A minimalistic portfolio website built with HTML, CSS, and JavaScript.</p>
+                    <a href="https://github.com/chandrika/project2" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out if you'd like to collaborate or just say hello!</p>
             <ul>
-                <li>HTML5 & CSS3</li>
-                <li>J
+                <li>Email: <a href="mailto:chandrika@example.com">chandrika@example.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/chandrika" target="_blank">LinkedIn</a></li>
+                <li>GitHub: <a href="https://github.com/chandrika" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Chandrika. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Smooth Scrolling Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
